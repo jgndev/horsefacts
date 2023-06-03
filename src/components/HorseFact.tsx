@@ -12,9 +12,7 @@ const HorseFact = () => {
       const response = await axios.get<Fact>(
         "https://horsefacts-api.jgnovak.dev/api/facts"
       );
-      console.log(response);
 
-      console.log(response.data);
       setFact(response.data);
     } catch (error) {
       console.log(error);
@@ -23,9 +21,14 @@ const HorseFact = () => {
 
   return (
     <>
-      <h1>Fact</h1>
-      <h2>{fact && <span>{fact.fact}</span>}</h2>
-      <button onClick={handleClick}>Get a Horse fact</button>
+      <h1 className="text-2xl">Horse Fact</h1>
+      <div>{fact && <span>{fact.fact}</span>}</div>
+      <button
+        className="rounded-md bg-black px-4 py-3 text-white"
+        onClick={handleClick}
+      >
+        Get a Horse fact
+      </button>
     </>
   );
 };
