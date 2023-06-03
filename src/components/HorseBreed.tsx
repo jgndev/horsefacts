@@ -22,7 +22,7 @@ const HorseBreed = () => {
   return (
     <>
       <h1 className="text-2xl">Horse Breed</h1>
-      <p>
+      <div>
         {breed && (
           <div>
             <div>Name: {breed.Name}</div>
@@ -38,7 +38,7 @@ const HorseBreed = () => {
             <div>Established: {breed.Established}</div>
           </div>
         )}
-      </p>
+      </div>
       <button
         className="rounded-md bg-black px-4 py-3 text-white"
         onClick={handleClicked}
